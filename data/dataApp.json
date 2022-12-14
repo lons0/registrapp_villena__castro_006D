@@ -1,0 +1,40 @@
+{
+  "alumnos": [
+    {
+      "id": 1,
+      "alumno": "alonso",
+      "seccion": "006D",
+      "fecha": "13/12"
+    },
+    {
+      "id": 2,
+      "alumno": "tomas",
+      "seccion": "006D",
+      "fecha": "12/12"
+    },
+    {
+      "id": 2,
+      "alumno": "pato",
+      "seccion": "006D",
+      "fecha": "12/12"
+    },
+    {
+      "alumno": "fefo",
+      "seccion": "006D",
+      "fecha": "21/12",
+      "id": 3
+    },
+    {
+      "alumno": "olanso",
+      "seccion": "007D",
+      "fecha": "12/12",
+      "id": 4
+    },
+    {
+      "alumno": "juan",
+      "seccion": "007D",
+      "fecha": "21/12",
+      "id": 5
+    }
+  ]
+}

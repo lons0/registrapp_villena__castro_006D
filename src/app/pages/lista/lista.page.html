@@ -1,0 +1,72 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="mostrarMenu()">
+        <ion-icon slot="icon-only" name="menu-outline" color="primary"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    
+    <ion-title>Lista</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<br>
+  <ion-title>Historial de asistencia</ion-title>
+<br>
+  <ion-card class="bordercard">
+    <ion-card-header>
+      <ion-row>
+        <ion-col size="12"> <ion-card-title>Programacion movil</ion-card-title></ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="12"><ion-card-title>006D</ion-card-title></ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="5">
+          <ion-card-subtitle>Fecha</ion-card-subtitle>
+        </ion-col>
+        <ion-col size="1">
+        </ion-col>
+        <ion-col size="6">
+          <ion-card-subtitle>Asistencia</ion-card-subtitle>
+        </ion-col>
+      </ion-row>
+      
+    </ion-card-header>
+    <ion-card-content>
+      <ion-card-content color="medium">
+        <ion-row>
+          <ion-col size="7">
+            <ion-card-subtitle>21/9 martes 10:06</ion-card-subtitle>
+          </ion-col>
+          <ion-col size="5">
+            <ion-card-subtitle>Presente</ion-card-subtitle>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="7">
+            <ion-card-subtitle>27/9 martes 10:30</ion-card-subtitle>
+          </ion-col>
+          <ion-col size="5">
+            <ion-card-subtitle>Presente</ion-card-subtitle>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="7">
+            <ion-card-subtitle>31/9 martes</ion-card-subtitle>
+          </ion-col>
+          <ion-col size="5">
+            <ion-card-subtitle>Ausente</ion-card-subtitle>
+          </ion-col>
+        </ion-row>
+      </ion-card-content>
+    </ion-card-content>
+  </ion-card>
+<br><br>
+  <ion-card routerLink="/user" color="warning">
+    <p>Visita vivo duoc para tener más info sobre tus cursos</p>    
+  </ion-card>
+
+</ion-content>

@@ -1,0 +1,102 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="mostrarMenu()">
+        <ion-icon slot="icon-only" name="menu-outline" color="primary"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    
+    <ion-title>Código QR</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<br>
+  <ion-title>Generar codigo QR</ion-title>
+
+<br>
+  
+<ion-item>
+  <ion-label></ion-label>
+</ion-item>
+
+<br><br>
+
+
+<ion-item>
+  <ion-label position="fixed"> nom alumno</ion-label>
+  <ion-input type="text" [(ngModel)]="newAlumno.alumno" required ></ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label position="fixed"> Seccion:</ion-label>
+  <ion-input type="text" [(ngModel)]="newAlumno.seccion" required ></ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label position="fixed"> Fecha: (dd/mm)</ion-label>
+  <ion-input type="text" [(ngModel)]="newAlumno.fecha" required ></ion-input>
+</ion-item>
+
+
+
+<ion-row>
+  <ion-col size="2"></ion-col>
+  <ion-col size="8"><ion-button (click)="generaScan()" (click)="crearAlumno()">
+    <ion-icon slot="start" name="camera-sharp"></ion-icon>
+    Generar código
+  </ion-button></ion-col>
+  <ion-col size="2"></ion-col>
+</ion-row>
+
+<ion-card-content>
+  
+<qrcode 
+[qrdata]="qrCodeString"
+[width]="256"
+[errorCorrectionLevel]="'M'"
+>
+</qrcode>
+</ion-card-content> 
+
+<br><br><br>
+<ion-button (click)="verScan()" expand="block">
+  Ver codigo QR
+</ion-button>
+<p>codigo: {{scannedResult}}</p>
+<br>
+
+
+
+<br><br>
+<!-- <ion-card class="bordercard">
+  <ion-card-header>
+    
+    <ion-card-title>Asistencia</ion-card-title>
+    <ion-card-subtitle>Alumnos en sala</ion-card-subtitle>
+  </ion-card-header>
+  <ion-card-content>
+
+    <ion-row>
+      <ion-item *ngFor="let a of qrServ" >
+        <ion-col size="8" class="ion-text-wrap" > {{a.alumno}} </ion-col>
+        <ion-col size="4"> {{a.seccion}}  {{a.fecha}}   </ion-col>
+      </ion-item>
+    </ion-row>
+
+
+  </ion-card-content>
+</ion-card> -->
+
+
+<br>
+<ion-item>
+  
+  <ion-label>ver historial completo</ion-label>
+  <ion-button slot="end" routerLink="/lista-prof">
+    <ion-icon name="list-circle-sharp" slot="end"></ion-icon>
+  </ion-button>
+</ion-item>
+
+</ion-content>

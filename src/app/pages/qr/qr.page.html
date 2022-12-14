@@ -1,0 +1,72 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="mostrarMenu()">
+        <ion-icon slot="icon-only" name="menu-outline" color="primary"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    
+    <ion-title>Código QR</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<br>
+  <ion-title>Marca asistencia</ion-title>
+
+<br>
+  <ion-list>
+    <ion-item>
+      <ion-select interface="popover" placeholder="Seccion">
+        <ion-select-option value="1">MDY_006D</ion-select-option>
+        <ion-select-option value="2">PGY_006D</ion-select-option>
+        <ion-select-option value="3">INI_034D</ion-select-option>
+        <ion-select-option value="4">MAT_004D</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+
+<br><br>
+<ion-row>
+  <ion-col size="2"></ion-col>
+  <ion-col size="8"><ion-button (click)="abrirCamara()">
+    <ion-icon slot="start" name="camera-sharp"></ion-icon>
+    Abrir cámara
+  </ion-button></ion-col>
+  <ion-col size="2"></ion-col>
+</ion-row>
+
+
+<br><br><br>
+<ion-button (click)="QR()" expand="block">
+  escanear qr
+</ion-button>
+<p>asistencia marcada en: {{scannedResult}}</p>
+
+<br><br>
+<ion-card class="bordercard">
+  <ion-card-header>
+    
+    <ion-card-title>Asistencia</ion-card-title>
+    <ion-card-subtitle>clases asistidas hoy</ion-card-subtitle>
+  </ion-card-header>
+  <ion-card-content>
+    <ion-row>
+      <ion-col size="8">asistencia marcada</ion-col>
+      <ion-col size="4">15:40hr</ion-col>
+    </ion-row>
+  </ion-card-content>
+</ion-card>
+
+
+<br>
+<ion-item>
+  
+  <ion-label>ver historial completo</ion-label>
+  <ion-button slot="end" routerLink="/lista">
+    <ion-icon name="list-circle-sharp" slot="end"></ion-icon>
+  </ion-button>
+</ion-item>
+
+</ion-content>

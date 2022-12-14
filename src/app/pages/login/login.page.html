@@ -1,0 +1,91 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-row>
+      <ion-col size="9"><ion-title>RegistrAPP</ion-title></ion-col>
+      
+      <ion-col size="3"><img src="assets/duoc.png" ></ion-col>
+    </ion-row>
+
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+  <br>
+  <ion-title> Inicia sesión</ion-title>
+  <br>
+
+
+  <ion-card>
+  
+
+    <form [formGroup]="formLogin" (ngSubmit)="onSubmit()">
+    <ion-item>
+      <ion-label position="floating">E-Mail <ion-text color="danger">*</ion-text></ion-label>
+      <ion-input  formControlName="correo" type="text"></ion-input> <!--required-->
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Contraseña <ion-text color="danger">*</ion-text></ion-label>
+      <ion-input  formControlName="password" type="password"></ion-input> <!--required-->
+    </ion-item>
+    <ion-button (click)="Ingesar()" expand="block" fill="outline " shape="round">
+      Iniciar sesión
+    </ion-button>
+  </form>
+  </ion-card>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button [routerLink]="['/register']">
+      
+        Registrate aquí
+      </ion-button>
+    </ion-buttons>
+
+    <ion-buttons slot="start">
+      <ion-button (click)="onclick()">
+      
+        Limpiar storage
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>
+
+<!-- <ion-card-content>
+  <form #formulario="ngForm" (ngSubmit)="onSubmit()">
+  
+    <ion-list-header>
+      <ion-label>Formulario Válido: {{formulario.valid}} </ion-label>
+    </ion-list-header>
+  
+  
+    <ion-item>
+      <ion-label>Email: </ion-label>
+      <ion-input type="email" placeholder="Email"
+                 name="email" value="" [(ngModel)]= "usuario.email"
+                 pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"
+                 required>
+      </ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label>Password: </ion-label>
+      <ion-input type="password"	 placeholder="Contraseña"
+                 name="password" value="" [(ngModel)]= "usuario.password"
+                 required>
+      </ion-input>
+    </ion-item>
+  <br>
+    <ion-button color="tertiary" [disabled] ="formulario.invalid"
+            type="submit" expand="block" routerLink="/inicio">
+      Inicia sesión
+    </ion-button>
+  
+  </form>
+  <br>
+  <a routerLink="/register">Registrate aquí</a>
+</ion-card-content> -->

@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="mostrarMenu()">
+        <ion-icon slot="icon-only" name="menu-outline" color="primary"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  <ion-title>API DÍAS FERIADOS </ion-title>
+
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content color="dark">
+
+  <ion-card-subtitle>Recuerda que estos días no hay clases en DuocUC</ion-card-subtitle>
+
+
+
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col mode="modal" *ngFor = "let dia of feriados">
+        <ion-card>
+          <ion-header >
+            <ion-toolbar>
+              <ion-title>{{ dia.type }}</ion-title>
+            </ion-toolbar>
+          </ion-header>
+          <br>
+          <ion-footer class="ion-no-border">
+            <ion-toolbar>
+              <ion-title>{{ dia.title }}</ion-title>
+            </ion-toolbar>
+          </ion-footer>
+
+
+          <ion-card-content>
+            <p>
+              {{ dia.date }}
+            </p>          
+          </ion-card-content>     
+          
+          
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

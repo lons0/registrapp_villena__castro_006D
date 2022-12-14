@@ -1,0 +1,58 @@
+<ion-app>
+  <ion-menu contentId="main" menuId="first" side="start" class="bg">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title> menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <div *ngIf=" isProfesor == 'false' ">
+        <ion-menu-toggle *ngFor="let c of componentes">
+          <ion-item [routerLink]="c.redirecTo" detail=true>
+            <ion-icon slot="start" [name]="c.icon" color="success" ></ion-icon>
+            {{c.name}}
+          </ion-item>
+        </ion-menu-toggle>
+      </div>
+      
+
+        <div *ngIf="isProfesor == 'true' " >
+        <ion-menu-toggle *ngFor="let c of componentesProfe">
+          <ion-item [routerLink]="c.redirecTo" detail=true>
+            <ion-icon slot="start" [name]="c.icon" color="success" ></ion-icon>
+            {{c.name}}
+          </ion-item>
+        </ion-menu-toggle>
+      </div>
+        <!-- El row siempre es de 12, este es una separación, dentro del row estan las columnas, entre todas, deben sumar 12-->
+        <ion-row>
+          <ion-col size="1">
+            
+          </ion-col>
+          <ion-col size="10">
+            <ion-item *ngIf="isLogin">
+              <ion-button [routerLink]="['/login']"  (click)="logOut()" color="secondary" size="small">Cerrar Sesión </ion-button>
+            </ion-item>
+            
+          </ion-col>
+          <!-- <ion-col size="10">
+            <ion-item *ngIf="!isLogin">
+              <ion-button color="secondary" size="small" routerLink="/login">Iniciar Sesión </ion-button>
+            </ion-item>
+            <ion-item *ngIf="isLogin">
+              <ion-button color="secondary" size="small">Cerrar Sesión </ion-button>
+            </ion-item>
+            
+          </ion-col> -->
+          <ion-col size="1">
+
+          </ion-col>
+        </ion-row>
+       
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  
+  <ion-router-outlet id="main"></ion-router-outlet>
+</ion-app>

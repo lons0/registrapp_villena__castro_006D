@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="mostrarMenu()">
+        <ion-icon slot="icon-only" name="menu-outline" color="primary"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    
+    <ion-title>Usuario</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card color="light" class="bordercard">
+  <ion-card-content >
+    <ion-row>
+      <ion-col size="4"><img src="assets/user1.jpg" class=" redondo" ></ion-col>
+      <ion-col size="8">
+
+        <ion-card-title  class="centrar">pato carlos </ion-card-title> 
+        <p color="medium" class="centrar">run 696969-9</p>
+      </ion-col>
+    </ion-row>
+  </ion-card-content>
+</ion-card>
+
+<ion-card color="light" class="bordercard">
+  
+  <ion-card-content>
+    <ion-card-subtitle>Carrera</ion-card-subtitle>
+    <p>Ingenieria informatica</p>
+    <ion-card-subtitle>Sede</ion-card-subtitle>
+    <p>Maipú</p>
+    <ion-card-subtitle>Gmail</ion-card-subtitle>
+    <p>pug.berto@duocuc.cl</p>
+
+
+  
+  </ion-card-content>
+</ion-card>
+<ion-card-content>
+  <br><br>
+  <ion-card-subtitle>Opciones de usuasrio</ion-card-subtitle>
+
+<!-- <ion-icon  style="width: 27px; height: 27px; padding-right: 5px;" slot="end" name="moon"></ion-icon> -->
+<ion-item >
+  <ion-toggle checked (ionChange) ='toggleTheme($event)' slot="start"></ion-toggle><ion-label slot="end">Dark Mode</ion-label>
+</ion-item>
+
+  <ion-item>
+    <ion-button color="tertiary" (click)="password()" expand="full" fill="outline" shape="round">
+      Cambiar contraseña  
+    </ion-button>
+  </ion-item>
+</ion-card-content>
+
+</ion-content>
